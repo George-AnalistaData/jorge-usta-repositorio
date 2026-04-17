@@ -5,7 +5,7 @@ SELECT
     AVG(precio_unitario) AS precio_promedio,
     MIN(precio_unitario) AS producto_mas_barato,
     MAX(precio_unitario) AS producto_mas_caro,
-    SUM(cantidad * precio_unitario) AS ingreso_total
+    SUM(cantidad * precio_unitario) AS ingreso_total,
 FROM ventas;
 
 -- Consulta 2: Resumen solo de Tecnología
@@ -15,7 +15,7 @@ SELECT
     AVG(precio_unitario) AS precio_promedio,
     MIN(precio_unitario) AS producto_mas_barato,
     MAX(precio_unitario) AS producto_mas_caro,
-    SUM(cantidad * precio_unitario) AS ingreso_total
+    SUM(cantidad * precio_unitario) AS ingreso_total,
 FROM ventas
 WHERE categoria = 'Tecnología';
 
@@ -26,7 +26,7 @@ SELECT
     AVG(precio_unitario) AS precio_promedio,
     MIN(precio_unitario) AS producto_mas_barato,
     MAX(precio_unitario) AS producto_mas_caro,
-    SUM(cantidad * precio_unitario) AS ingreso_total
+    SUM(cantidad * precio_unitario) AS ingreso_total,
 FROM ventas
 WHERE categoria = 'Oficina';
 
@@ -34,6 +34,6 @@ WHERE categoria = 'Oficina';
 SELECT 
     COUNT(*) AS total_ventas,
     SUM(cantidad) AS unidades_vendidas,
-    SUM(cantidad * precio_unitario) AS ingreso_total
+    SUM(cantidad * precio_unitario) AS ingreso_total,
 FROM ventas
 WHERE ciudad = 'Bogotá';
